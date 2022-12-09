@@ -1,0 +1,137 @@
+.menu form{
+    display: grid;
+    grid-template: 
+    "img title title" 24px
+    "img price option" 24px
+    "img button button" 32px
+    / 80px 62px 1fr;
+    align-items: center;
+}
+
+.menu{
+    font-size: 15px;
+    padding: 20px 0;
+    border-bottom: 1px solid #707070;
+}
+
+.menu:last-child{
+    border-bottom: none;
+}
+
+.menu form > h1{
+    grid-area: title;
+    font-size: 16px;
+}
+
+.menu-price{
+    grid-area: price;
+}
+
+.menu-option-list{
+    grid-area:option;
+    justify-self: flex-end;
+}
+
+.menu form > span:last-child{
+    grid-area:button;
+    justify-self: flex-end;
+}
+
+
+.menu-option-input{
+    width:12px;
+    height:12px;
+    border:1px solid #a24f17;
+}
+
+.menu-option-input-on{
+    background-color: #a24f17;
+}
+
+.menu-option{
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-option .menu-option-input-on{
+    margin-right: 5px;
+}
+
+.menu-img{
+    border-radius: 40px;
+    object-fit: cover;
+    width:100%;
+    height:100%;
+}
+
+
+.menu-img-box{
+    grid-area: img;
+    width:80px;
+    height:80px;
+}
+
+@media (min-width:768px) {
+    
+
+    .menu-list{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:30px;
+    }
+
+    .menu{
+        border-bottom: 0;
+        padding: 0 0 10px 0;
+        border: 1px solid #707070;
+        flex: 1 0 300px;
+    }
+
+    .menu:last-child{
+        border-bottom: 1px solid #707070;
+    }
+
+    .menu form{
+        grid-template: 
+        "img img " 130px
+        "title price" 30px
+        "option option" 30px
+        "button button" 40px
+        / 1fr 70px;
+    }
+
+    .menu-img{
+        border-radius: 0;
+    }
+
+    .menu-img-box{
+        width:100%;
+        height:100%;
+    }
+
+    .menu form > h1{
+        margin-left:5px;
+        grid-area:title;
+        justify-self: flex-start;
+        align-self: center;
+    }
+
+    .menu-price{
+        justify-self: flex-end;
+        align-self: center;
+        margin-right: 5px;
+    }
+
+    .menu-option-list{
+        justify-self: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu form > span:last-child{
+        grid-area:button;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+    }
+}

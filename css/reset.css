@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    outline: none; /* 확인 필요 */
+}
+
+body, h1, ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color:inherit; /* 확인 필요 */
+}
+
+li{
+   list-style-type: none;
+}
+
+button{
+    border:none;
+}

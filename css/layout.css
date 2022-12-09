@@ -1,0 +1,53 @@
+html{
+    height:100%;
+}
+
+body{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    background-color: aquamarine;
+}
+
+.body{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.aside{
+    background-color: blueviolet;
+}
+
+.main{
+    background-color: rgb(197, 197, 218);
+    flex-grow: 1;
+}
+
+.footer{
+    background-color: brown;
+}
+
+
+/* 최소 700px 이상일 때에 적용된다.*/
+@media (min-width:500px) {
+    .body{
+        flex-direction: row;
+    }
+    .main{
+        background-color: cyan;
+    }
+}
+
+@media (min-width:800px) {
+    .body{
+        flex-direction: row;
+    }
+    .main{
+        background-color: crimson;
+    }
+}
